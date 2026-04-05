@@ -12,7 +12,7 @@ jobs:
         include:
           - os: ubuntu-latest
             name: linux
-          - os: macos-latest
+          - os: macos-13
             name: macos
           - os: windows-latest
             name: windows
@@ -22,10 +22,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: Select Xcode 16.2
-        if: matrix.name == 'macos'
-        run: sudo xcode-select -s /Applications/Xcode_16.2.app
 
       - name: Install Linux dependencies
         if: matrix.name == 'linux'
