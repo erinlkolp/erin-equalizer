@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ErinEqPreset name="Bass Boost">
+  <Bands>
+    <Band index="0" gain="8"/>
+    <Band index="1" gain="7"/>
+    <Band index="2" gain="7"/>
+    <Band index="3" gain="6"/>
+    <Band index="4" gain="5"/>
+    <Band index="5" gain="4"/>
+    <Band index="6" gain="3"/>
+    <Band index="7" gain="2"/>
+    <Band index="8" gain="1"/>
+    <Band index="9" gain="0"/>
+    <Band index="10" gain="0"/>
+    <Band index="11" gain="0"/>
+    <Band index="12" gain="0"/>
+    <Band index="13" gain="0"/>
+    <Band index="14" gain="0"/>
+    <Band index="15" gain="0"/>
+    <Band index="16" gain="0"/>
+    <Band index="17" gain="0"/>
+    <Band index="18" gain="0"/>
+    <Band index="19" gain="0"/>
+    <Band index="20" gain="0"/>
+    <Band index="21" gain="0"/>
+    <Band index="22" gain="0"/>
+    <Band index="23" gain="0"/>
+    <Band index="24" gain="0"/>
+    <Band index="25" gain="0"/>
+    <Band index="26" gain="0"/>
+    <Band index="27" gain="0"/>
+    <Band index="28" gain="0"/>
+    <Band index="29" gain="0"/>
+    <Band index="30" gain="0"/>
+  </Bands>
+  <OutputGain value="0"/>
+</ErinEqPreset>
