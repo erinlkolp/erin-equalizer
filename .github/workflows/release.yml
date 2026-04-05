@@ -43,7 +43,12 @@ jobs:
             libwebkit2gtk-4.1-dev \
             libcurl4-openssl-dev
 
+      - name: Configure (macOS universal)
+        if: matrix.name == 'macos'
+        run: cmake -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64"
+
       - name: Configure
+        if: matrix.name != 'macos'
         run: cmake -B build -DCMAKE_BUILD_TYPE=Release
 
       - name: Build
