@@ -65,6 +65,18 @@ ErinEqProcessor::ErinEqProcessor()
 {
 }
 
+bool ErinEqProcessor::isBusesLayoutSupported(const BusesLayout& layouts) const
+{
+    if (layouts.getMainOutputChannelSet() != juce::AudioChannelSet::mono()
+        && layouts.getMainOutputChannelSet() != juce::AudioChannelSet::stereo())
+        return false;
+
+    if (layouts.getMainOutputChannelSet() != layouts.getMainInputChannelSet())
+        return false;
+
+    return true;
+}
+
 void ErinEqProcessor::prepareToPlay(double sampleRate, int samplesPerBlock)
 {
     eqProcessor.prepare(sampleRate, samplesPerBlock);
