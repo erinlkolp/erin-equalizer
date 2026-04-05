@@ -50,19 +50,19 @@ jobs:
         if: matrix.name == 'linux'
         run: |
           cd build/ErinEqualizer_artefacts/Release/VST3
-          tar czf "$GITHUB_WORKSPACE/ErinEqualizer-${{ github.event.release.tag_name }}-linux.tar.gz" ErinEqualizer.vst3
+          tar czf "$GITHUB_WORKSPACE/ErinEqualizer-${{ github.event.release.tag_name }}-linux.tar.gz" "Erin Equalizer.vst3"
 
       - name: Package (macOS)
         if: matrix.name == 'macos'
         run: |
           cd build/ErinEqualizer_artefacts/Release/VST3
-          zip -r "$GITHUB_WORKSPACE/ErinEqualizer-${{ github.event.release.tag_name }}-macos.zip" ErinEqualizer.vst3
+          zip -r "$GITHUB_WORKSPACE/ErinEqualizer-${{ github.event.release.tag_name }}-macos.zip" "Erin Equalizer.vst3"
 
       - name: Package (Windows)
         if: matrix.name == 'windows'
         shell: pwsh
         run: |
-          Compress-Archive -Path "build\ErinEqualizer_artefacts\Release\VST3\ErinEqualizer.vst3" -DestinationPath "ErinEqualizer-${{ github.event.release.tag_name }}-windows.zip"
+          Compress-Archive -Path "build\ErinEqualizer_artefacts\Release\VST3\Erin Equalizer.vst3" -DestinationPath "ErinEqualizer-${{ github.event.release.tag_name }}-windows.zip"
 
       - name: Upload release asset
         uses: softprops/action-gh-release@v2
