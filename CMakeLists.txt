@@ -28,7 +28,7 @@ juce_add_plugin(ErinEqualizer
     PLUGIN_CODE EqGr
     FORMATS VST3 Standalone
     PRODUCT_NAME "Erin Equalizer"
-    VST3_CATEGORIES Eq
+    VST3_CATEGORIES EQ
     IS_SYNTH FALSE
     NEEDS_MIDI_INPUT FALSE
     NEEDS_MIDI_OUTPUT FALSE
