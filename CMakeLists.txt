@@ -30,7 +30,7 @@ juce_add_plugin(ErinEqualizer
     COMPANY_NAME "Erin Audio"
     PLUGIN_MANUFACTURER_CODE Erin
     PLUGIN_CODE EqGr
-    FORMATS VST3 Standalone
+    FORMATS AU VST3 Standalone
     PRODUCT_NAME "Erin Equalizer"
     VST3_CATEGORIES Fx EQ
     IS_SYNTH FALSE

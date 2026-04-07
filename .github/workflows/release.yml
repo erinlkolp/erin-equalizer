@@ -51,8 +51,12 @@ jobs:
         if: matrix.name != 'macos'
         run: cmake -B build -DCMAKE_BUILD_TYPE=Release
 
-      - name: Build
+      - name: Build VST3
         run: cmake --build build --config Release --target ErinEqualizer_VST3
+
+      - name: Build AU
+        if: matrix.name == 'macos'
+        run: cmake --build build --config Release --target ErinEqualizer_AU
 
       - name: Package (Linux)
         if: matrix.name == 'linux'
@@ -63,8 +67,8 @@ jobs:
       - name: Package (macOS)
         if: matrix.name == 'macos'
         run: |
-          cd build/ErinEqualizer_artefacts/Release/VST3
-          zip -r "$GITHUB_WORKSPACE/ErinEqualizer-${{ github.event.release.tag_name }}-macos.zip" "Erin Equalizer.vst3"
+          cd build/ErinEqualizer_artefacts/Release
+          zip -r "$GITHUB_WORKSPACE/ErinEqualizer-${{ github.event.release.tag_name }}-macos.zip" VST3/"Erin Equalizer.vst3" AU/"Erin Equalizer.component"
 
       - name: Package (Windows)
         if: matrix.name == 'windows'
